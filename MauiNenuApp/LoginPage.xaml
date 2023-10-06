@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiNenuApp.LoginPage"
+             BackgroundColor="WhiteSmoke">
+    <VerticalStackLayout Margin="20" Padding="30,60,30,60" >
+        <Label Text="请先登录NENU" FontSize="60" TextColor="DarkBlue"/>
+        <Label Text="学号" FontSize ="30" TextColor="blue"/>
+        <Entry x:Name="usernameEntry"/>
+        <Label Text="密码" FontSize ="30" TextColor="Blue"/>
+        <Entry x:Name="passwordEntry" IsPassword="true"/>
+        <Button Text="登录" x:Name="LoginButton" 
+                FontSize ="45" 
+                Margin="40" BackgroundColor="DeepSkyBlue" Clicked="LoginButton_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>

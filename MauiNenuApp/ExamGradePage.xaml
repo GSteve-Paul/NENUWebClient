@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiNenuApp.ExamGradePage"
+             BackgroundColor="WhiteSmoke">
+    <ContentPage.Resources>
+        <ContentView x:Key="HeaderComplex">
+            <Grid x:Name="headerGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="开课学期" />
+                <Label Grid.Row="0" Grid.Column="1" Text="课程编号" />
+                <Label Grid.Row="0" Grid.Column="2" Text="课程名称" />
+                <Label Grid.Row="0" Grid.Column="3" Text="难度系数" />
+                <Label Grid.Row="0" Grid.Column="4" Text="总成绩" />
+                <Label Grid.Row="0" Grid.Column="5" Text="学分绩点" />
+                <Label Grid.Row="0" Grid.Column="6" Text="成绩标志" />
+                <Label Grid.Row="0" Grid.Column="7" Text="课程性质" />
+                <Label Grid.Row="0" Grid.Column="8" Text="通选课类别" />
+                <Label Grid.Row="0" Grid.Column="9" Text="课程类别" />
+                <Label Grid.Row="0" Grid.Column="10" Text="学时" />
+                <Label Grid.Row="0" Grid.Column="11" Text="学分" />
+                <Label Grid.Row="0" Grid.Column="12" Text="考试性质" />
+                <Label Grid.Row="0" Grid.Column="13" Text="补重学期" />
+                <Label Grid.Row="0" Grid.Column="14" Text="审核状态" />
+            </Grid>
+        </ContentView>
+        <ContentView x:Key="HeaderSimple">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="开课学期" />
+                <Label Grid.Row="0" Grid.Column="1" Text="课程名称" />
+                <Label Grid.Row="0" Grid.Column="2" Text="总成绩" />
+                <Label Grid.Row="0" Grid.Column="3" Text="学分绩点" />
+                <Label Grid.Row="0" Grid.Column="4" Text="课程性质" />
+                <Label Grid.Row="0" Grid.Column="5" Text="通选课类别" />
+                <Label Grid.Row="0" Grid.Column="6" Text="课程类别" />
+            </Grid>
+        </ContentView>
+        <DataTemplate x:Key="ContentComplex">
+            <ViewCell>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding 开课学期}" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding 课程编号}" />
+                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding 课程名称}" />
+                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding 难度系数}" />
+                    <Label Grid.Row="0" Grid.Column="4" Text="{Binding 总成绩}" />
+                    <Label Grid.Row="0" Grid.Column="5" Text="{Binding 学分绩点}" />
+                    <Label Grid.Row="0" Grid.Column="6" Text="{Binding 成绩标志}" />
+                    <Label Grid.Row="0" Grid.Column="7" Text="{Binding 课程性质}" />
+                    <Label Grid.Row="0" Grid.Column="8" Text="{Binding 通选课类别}" />
+                    <Label Grid.Row="0" Grid.Column="9" Text="{Binding 课程类别}" />
+                    <Label Grid.Row="0" Grid.Column="10" Text="{Binding 学时}" />
+                    <Label Grid.Row="0" Grid.Column="11" Text="{Binding 学分}" />
+                    <Label Grid.Row="0" Grid.Column="12" Text="{Binding 考试性质}" />
+                    <Label Grid.Row="0" Grid.Column="13" Text="{Binding 补重学期}" />
+                    <Label Grid.Row="0" Grid.Column="14" Text="{Binding 审核状态}" />
+                </Grid>
+            </ViewCell>
+        </DataTemplate>
+        <DataTemplate x:Key="ContentSimple">
+            <ViewCell>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding 开课学期}" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding 课程名称}" />
+                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding 总成绩}" />
+                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding 学分绩点}" />
+                    <Label Grid.Row="0" Grid.Column="4" Text="{Binding 课程性质}" />
+                    <Label Grid.Row="0" Grid.Column="5" Text="{Binding 通选课类别}" />
+                    <Label Grid.Row="0" Grid.Column="6" Text="{Binding 课程类别}" />
+                </Grid>
+            </ViewCell>
+        </DataTemplate>
+    </ContentPage.Resources>
+    <ListView x:Name="GradeTableView" Margin="20"/>
+</ContentPage>
